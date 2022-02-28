@@ -1,0 +1,29 @@
+
+{
+  "token": "",
+  "mongo": "",
+  "prefix": "pt!",
+  "activity": "/help .gg/azury | On {shards} Cluster(s)",
+  "type": "WATCHING",
+  "status": "idle",
+  
+  "COMMENT": "Only enable hostingweb if you are using replit!",
+  "hostingweb": true,
+  
+  "developers": [],
+
+  "color": {
+    "main"   : "GREEN",
+    "error"  : "#ff5f8e",
+    "success": "#99ff9c",
+
+    "red"   : "#ff5a48",
+    "orange": "#ffca4d",
+    "yellow": "#ffcc5c",
+    "green" : "#74ff89",
+    "purple": "#7d5eff",
+    "pink"  : "#ff88d2",
+    "grey"  : "#4b4b4b",
+    "white" : "#ffffff"
+  }
+}
