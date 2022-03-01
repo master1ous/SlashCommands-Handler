@@ -1,5 +1,4 @@
-# SlashCommands-Handler | Context-Handler | Mongo-Support | Clusters/Sharding
-An Amazing SlashCommands Handler Made by The *Azury Team*
+**An Amazing SlashCommands Handler Made by The *Azury Team***
 ---
 # 🛠️ FEATURES:
 `1.` SlashCommands Support<br>
