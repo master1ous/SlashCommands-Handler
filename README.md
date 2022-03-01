@@ -1,4 +1,4 @@
-**An Amazing SlashCommands Handler Made by The *Azury Team***
+# **SlashCommands Handler by The *Azury Team***
 ---
 # 🛠️ FEATURES:
 `1.` SlashCommands Support<br>
