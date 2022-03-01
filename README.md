@@ -1,5 +1,5 @@
 # **SlashCommands Handler by The *Azury Team***
----
+
 # 🛠️ FEATURES:
 `1.` SlashCommands Support<br>
 `2.` ContextMenu Support<br>
