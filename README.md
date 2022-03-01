@@ -1,4 +1,5 @@
 # **SlashCommands Handler by The *Azury Team***
+> *If this Git-Repo gets "40" Stars ⭐ i'll add some more Commands!*
 
 # 🛠️ FEATURES:
 `1.` SlashCommands Support<br>
