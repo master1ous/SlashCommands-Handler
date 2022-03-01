@@ -1,8 +1,11 @@
-# SlashCommands-Handler
-An Amazing SlashCommands Handler (With Sharding &amp; Mongo) Made by The *Azury Dev team*
+# SlashCommands-Handler | Context-Handler | Mongo-Support | Clusters/Sharding
+An Amazing SlashCommands Handler Made by The *Azury Team*
 ---
-This Handler Works with "Auto" Sharding & Clusters, It also Requires Mongoose to work (As it has a Cmd Cooldown System)
-This Handler ALSO has ContextMenu Support!
+# 🛠️ FEATURES:
+`1.` SlashCommands Support<br>
+`2.` ContextMenu Support<br>
+`3.` Sharding/Clusters System<br>
+`4.` Mongoose Database ***(If you Don't Have a MongoDb, Get one [here](https://www.mongodb.com/))***
 
 # 📑 RULES:
 `1.` Give Credits if **you** consider using!<br>
