@@ -30,7 +30,7 @@ module.exports = {
       const embed = new MessageEmbed()
       .setTitle(`Discord Bot | Handler | Azury`)
       .setColor(client.config.color.yellow)
-        .addField(`About Me`, "I am a Slash COmmands Discord Bot: handler by discord.gg/azury")
+        .addField(`About Me`, "I am a Slash COmmands Discord Bot: handler by https://discord.gg/azury\n> *GIVE CREDITS IF U USE!*")
       .addFields(categories)
       .setFooter(`Powered by Azury.live\n🔷 Server-Shard: ${interaction.guild.shardId}`, interaction.guild.iconURL())
       return interaction.followUp({ embeds: [embed] })
