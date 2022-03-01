@@ -13,4 +13,4 @@
 # 🔗 Support Server<br>
 <a href="https://discord.gg/azury"> <img src="https://discord.com/api/guilds/895398888113049631/widget.png?style=banner2">
 <br>
-  *Like what you see? You can __order__ bots from Our Discord-Server which are way better!*
+  ***Like what you see? You can __order__ bots from Our Discord-Server which are way better!***
