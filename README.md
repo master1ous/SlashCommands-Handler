@@ -5,8 +5,8 @@ This Handler Works with "Auto" Sharding & Clusters, It also Requires Mongoose to
 This Handler ALSO has ContextMenu Support!
 
 # 📑 RULES:
-`1.` Give Credits if **you** consider using!
-`2.` Dont re-sell any code using the Handler **unless** you have **majorly** changed it!
+`1.` Give Credits if **you** consider using!<br>
+`2.` Dont re-sell any code using the Handler **unless** you have **majorly** changed it!<br>
 `3.` Enjoy 💘<br><br>
 # 🔗 Support Server<br>
 <a href="https://discord.gg/azury"> <img src="https://discord.com/api/guilds/895398888113049631/widget.png?style=banner2">
