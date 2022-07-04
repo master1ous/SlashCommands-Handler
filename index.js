@@ -2,6 +2,8 @@ const { Client, Collection } = require("discord.js");
 const chalk = require("chalk");
 const colors = require("colors")
 const Cluster = require('discord-hybrid-sharding');
+const config = require('./config.json');
+const discordModals = require('discord-modals');
 const client = new Client({
     shards: Cluster.data.SHARD_LIST, 
     shardCount: Cluster.data.TOTAL_SHARDS, 
@@ -18,13 +20,14 @@ client.cluster = new Cluster.Client(client)
 
 // Initializing the project
 require("./handler")(client);
+discordModals(client);
 
 
 /*        WEB & BOT SERVER         ¦¦        WEB & BOT SERVER        */ 
 if(client.config.hostingweb == true) {
 require("./webport")();
 }
-client.login(process.env.token || client.config.token)
+client.login(process.env.token || config.token)
 
 /*           ANTI CRASHING            ¦¦           ANTI CRASHING           */ 
 process.on('unhandledRejection', (reason, p) => {
