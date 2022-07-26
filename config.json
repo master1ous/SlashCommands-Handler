@@ -1,11 +1,15 @@
 
 {
   "token": "",
-  "mongo": "",
   "prefix": "pt!",
   "activity": "/help .gg/azury | On {shards} Cluster(s)",
   "type": "WATCHING",
   "status": "idle",
+  
+  "mongoDB": {
+    "is_enabled": false,
+    "mongoURL": ""
+  },
   
   "COMMENT": "Only enable hostingweb if you are using replit!",
   "hostingweb": true,
