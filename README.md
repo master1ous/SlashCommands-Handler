@@ -8,9 +8,8 @@
 
 # 🛠️ FEATURES:
 `1.` SlashCommands Support<br>
-`2.` ContextMenu Support<br>
 `3.` Sharding/Clusters System<br>
-`4.` Mongoose Database ***If you Don't Have a MongoDatabase, **[Get it here](https://www.mongodb.com/)**
+`4.` Mongoose Database ***If you Don't Have a MongoDatabase, [Get it here](https://www.mongodb.com/)***
 
 # 📑 RULES:
 `1.` Give Credits if **you** consider using it (Unless it's for a private bot)!<br>
