@@ -16,6 +16,8 @@ const fs = require(`fs`);
 client.config = require("./config.json");
 client.cluster = new Cluster.Client(client)
 
+global.config = require("./config.json");
+
 // Initializing the project
 require("./handler")(client);
 
