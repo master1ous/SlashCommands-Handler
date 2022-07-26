@@ -70,7 +70,7 @@ await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsD
      }
       }
       if(message.content.startsWith(`${config.prefix}help`)) {
-        return message.deploy(`Sorry, but this bot doesnt't use \`Prefix\` command!\n_Due to Discord changing their policies we use \`Slash\` commands_.\n\n**__Don't see the \`Slash\` Commands in you're guild?__**\n***Then use the \`${config.prefix}deploy\` command __4x times__!***`)
+        return message.reply(`Sorry, but this bot doesnt't use \`Prefix\` command!\n_Due to Discord changing their policies we use \`Slash\` commands_.\n\n**__Don't see the \`Slash\` Commands in you're guild?__**\n***Then use the \`${config.prefix}deploy\` command __4x times__!***`)
       }
     })
       
