@@ -2,7 +2,7 @@ const { glob } = require("glob");
 const { promisify } = require("util");
 const { Client } = require("discord.js");
 const mongoose = require("mongoose");
-const chalk = require("chalk");
+const { red, green, blue, magenta, cyan, white, gray, black } = require("chalk");
 const Discord = require('discord.js');
 const globPromise = promisify(glob);
 
@@ -25,10 +25,16 @@ module.exports = async (client) => {
     
     // Events
     const eventFiles = await globPromise(`${process.cwd()}/events/*.js`);
+  setTimeout(async()=> {
+  console.log(blue(`[✅] :`)+`: Loaded the "Events" files`.green.bold)
+  }, 200)
     eventFiles.map((value) => require(value));
 
     // Slash Commands
     const slashCommands = await globPromise(`${process.cwd()}/SlashCommands/*/*.js`);
+  setTimeout(async()=> {
+  console.log(blue(`[✅] :`)+`: Loaded the "SlashCommands" files`.green.bold)
+  }, 200)
     const arrayOfSlashCommands = [];
     slashCommands.map((value) => {
       const file = require(value);
@@ -39,14 +45,14 @@ module.exports = async (client) => {
 
     
     client.on("messageCreate", async (message, user) => {
-      if(message.content.startsWith(`${client.config.prefix}deploy`)) {
+      if(message.content.startsWith(`${config.prefix}deploy`)) {
         try {
         if(!message.member.permissions.has("MANAGE_GUILD")) {
         return message.reply(`**You cannot use this \`Deploy\` command!**\n> **There are \`${arrayOfSlashCommands.length} Slash-Commands\` for ${client.user.username}!**`);
       }
       let themsg = await message.reply(`**Attempting to set the GUILD Slash Commands in \`${message.guild.name}\`...**`)
 await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsData) => {
-      themsg.edit(`${client.emoji.correct} **Loading \`${slashCommandsData.size} Slash-Commands\`** (\`${slashCommandsData.map(d => d.options).flat().length} Subcommands\`) in ${message.guild.name}`);
+      themsg.edit(`Starting to load **${slashCommandsData.size}** slash commands to this guild... \n _It's recommended to use command 4x times to ensure acurate deploy_`);
         }).catch((e) => {
           console.log(e)
           themsg.edit(`**I Could not load the Slash Commands for ${message.guild.name}**\n\n**I Must be missing permissions to Create Slash-Commands! Invite me when this link:**\n> https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands`)
@@ -63,6 +69,9 @@ await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsD
       })
      }
       }
+      if(message.content.startsWith(`${config.prefix}help`)) {
+        return message.deploy(`Sorry, but this bot doesnt't use \`Prefix\` command!\n_Due to Discord changing their policies we use \`Slash\` commands_.\n\n**__Don't see the \`Slash\` Commands in you're guild?__**\n***Then use the \`${config.prefix}deploy\` command __4x times__!***`)
+      }
     })
       
 
@@ -70,11 +79,22 @@ await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsD
    await client.application.commands.set(arrayOfSlashCommands);
    return console.log(`⚡ I was Invited to ${guild.name}! I will now start creating the Slash Commands (If i have perms)`)
     })
-// Mongoose
-  mongoose.connect(process.env.mongo || client.config.mongo, {
+
+
+
+  if(client.config.mongoDB.is_enabled == true) {
+    
+    mongoose.connect(process.env.mongoURL || client.db.mongoDB.mongoURL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-  }).then(console.log(`🏆 Loading MONGO database`))
+  }).then(console.log(blue(`[✅] :`)+`: The MongoDB is CONNECTED`.green.bold)).catch(async(e)=> {
+      console.log(blue(`[⚠️] :`)+`: The MongoDB is HAVING ISSUES "Failed to Connect"`.yellow.bold)
+  })
+  } else {
+    console.log(blue(`[❌] :`)+`: The MongoDB is DISABLED`.red.bold)
+  }
+    
+
 }
 
 
